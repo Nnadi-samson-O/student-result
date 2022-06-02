@@ -22,3 +22,35 @@ student Gender : {test_student.gender}
 =========================================
 """
 print(header)
+print("subjects:")
+average_score = 0
+
+for x in scores_dict.keys():
+    y = scores_dict[x]
+    print(f'{x}: {y[-1]}')
+    average_score += y[-1]
+
+new_average =average_score / len(scores_dict)
+remarks = ""
+if new_average <= 40:
+    remarks = "poor"
+elif new_average > 40:
+    remarks = "average"
+else:
+    remarks = "good"
+
+footer = f"""
+===========================
+Average: {new_average}
+comment: {remarks}
+===========================
+"""
+print(footer)
+
+with open("student-result.txt", "w") as file:
+    for student in header:
+        file.writelines(header)
+    file.write("\n")
+
+
+

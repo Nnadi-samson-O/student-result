@@ -26,5 +26,4 @@ class Student:
 
             self.subjects[subject_name] = score_list
             
-        
     

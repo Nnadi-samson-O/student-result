@@ -1,0 +1,2 @@
+"name": "Samson Onyebuchi", "phone": "09876543", "gender": "Male", "date_of_birth": "09/09/2001", "account_number": 3119172356, "transaction": {}, "balance": 0
+"name": "Samson Onyebuchi", "phone": "12345678909", "gender": "Male", "date_of_birth": "08/09/2000", "account_number": 3638249076, "transaction": {}, "balance": 0
