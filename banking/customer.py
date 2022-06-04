@@ -7,14 +7,24 @@ class Customer:
     Create a customer. Ensure to supply name, phone number, gender and date of birth.
     System will generate account number.
     """
-    def __init__(self, name, phone_number, gender, date_of_birth):
+    def __init__(self, name, phone_number, gender, date_of_birth, account_number=0, transaction={}, balance=0):
         self.name = name
         self.phone = phone_number
         self.gender = gender
         self.date_of_birth = date_of_birth
-        self.account_number = random.randint(3000000000, 3999999999) # generate 10-digit random number 
-        self.transaction = {}
-        self.balance = 0
+        
+
+        if account_number == 0:
+            self.account_number = self.generate_account_number()
+        else:
+            self.account_number = account_number
+        #self.account_number = random.randint(3000000000, 3999999999) # generate 10-digit random number 
+        self.transaction = transaction
+        self.balance = balance
+
+    @staticmethod
+    def generate_account_number():
+        return random.randint(1000000000, 999999999)
 
     def send_money(self, account_name, account_number, bank_name, amount):
         """
@@ -31,9 +41,7 @@ class Customer:
             }
             self.balance -= amount # same as self.balance = self.balance - amount
             self.transaction[new_transaction.date] = new_transaction.type
-            return True
-        else:
-            return False
+        
 
     def buy_airtime(self):
         pass
