@@ -4,5 +4,4 @@ def strip():
     print(("space has been cleared", x))
     
     
-    
 strip()
