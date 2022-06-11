@@ -10,19 +10,26 @@
 #     print("the boy is good") 
 
 
-def main():
-    number = get_number()
-    num(number)
+# def main():
+#     number = get_number()
+#     num(number)
 
-def get_number():
-        while True:
-            n = int(input("what's n\n"))
-            n -=1
-            if n > 0:
-                break;
-        return n
+# def get_number():
+#         while True:
+#             n = int(input("what's n\n"))
+#             n -=1
+#             if n > 0:
+#                 break;
+#         return n
 
-def num(n):
-    for t in range(n):
-        print(t, "we are good to go")
-main()
+# def num(n):
+#     for t in range(n):
+#         print(t, "we are good to go")
+# main()
+
+from re import I
+
+
+students = ["mod man", "onyebuchi", "samson"]
+for i in range(len(students)):
+    print(i + 1, students[i])
