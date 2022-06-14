@@ -103,4 +103,3 @@ sender, receiver, account, bank, amount = "onyebuchi", "frank", 3452738956, "fir
 transfer(sender, receiver, account, bank, amount)
 #add_new_customer()
 #load_data()
-#
