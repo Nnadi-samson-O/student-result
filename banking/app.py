@@ -1,5 +1,4 @@
 from http import client
-import json
 from posixpath import split
 from turtle import update
 import pymongo
@@ -8,7 +7,6 @@ from customer import Customer
 client = pymongo.MongoClient("mongodb://localhost:27017")
 db = client["bank_app"]
 my_collection = db["customer_data"]
-
 
 def add_new_customer(name=""):
     split_input = []

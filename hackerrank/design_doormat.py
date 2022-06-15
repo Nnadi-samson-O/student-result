@@ -1,6 +1,4 @@
-from sys import _enablelegacywindowsfsencoding
-
-#This argument accepts two in put, if incase the \first digit is 4 the second will be the tripl of the first argument
+#This argument accepts two in put, if incase the first digit is 4 the second will be the tripl of the first argument
 n,m = input("Enter integer here: ").split() 
 
 c = "|"
