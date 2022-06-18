@@ -24,7 +24,7 @@ def main():
     print("squares of num is", sqare(num))
 
 def sqare(n):
-    return n * n
+    return n ** 2
 
 
 main()
