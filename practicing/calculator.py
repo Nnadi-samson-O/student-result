@@ -16,7 +16,6 @@
 
 # print(f"{z:.2f}")
 
-from tkinter import N
 
 
 def main():
@@ -24,7 +23,7 @@ def main():
     print("squares of num is", sqare(num))
 
 def sqare(n):
-    return n ** 2
+    return pow(n, 3)
 
 
 main()
