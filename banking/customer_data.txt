@@ -1,6 +1,0 @@
-{"name": "Franklyn Ifechukwu", "phone": "09876543210", "gender": "Male", "date_of_birth": "09/10/1990", "account_number": 3543508293, "balance": 0}
-{"name": "John Eze", "phone": "08123456789", "gender": "Male", "date_of_birth": "11/11/1980", "account_number": 3684105407, "balance": 0}
-{"name": "Frank", "phone": "09912", "gender": "M", "date_of_birth": "07/07/88", "account_number": 3877233292, "transaction": {}, "balance": 0}
-"name": "Samson Onyebuchi", "phone": "08031234567", "gender": "Male", "date_of_birth": "10/10/2000", "account_number": 3038910778, "transaction": {}, "balance": 0
-"name": "amama", "phone": "mama", "gender": "mama", "date_of_birth": "mmm", "account_number": 3540798331, "transaction": {}, "balance": 0
-"name": "Samson Onyebuchi", "phone": "09031234765", "gender": "Male", "date_of_birth": "12/12/1999", "account_number": 3233549312, "transaction": {}, "balance": 0
