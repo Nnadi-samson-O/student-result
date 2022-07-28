@@ -6,10 +6,11 @@
 
 #The find function returns the index if find and retur -1 if not found
 
-s = "the journey to success is being determined by effort being but in it"
+s = "the journey to success is being determined by effort being put in it"
 
 #index = s.find("jour")
-index = s.find("job")
+index = s.find("to")
 
 print(index)
+
 

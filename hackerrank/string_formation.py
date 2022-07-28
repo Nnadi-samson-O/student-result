@@ -17,3 +17,4 @@ for i in range(1, n+1):
     h = str(hex(i))[2:].upper().rjust(max_length)
     b = bin(i)[2:].rjust(max_length)
     print("{} {} {} {}".format(d, o, h, b))
+    print(i)

@@ -9,9 +9,10 @@ x = int(input("Enter x: "))
 
 p = 0
 for i in range(x):
-    size, price = map(int, input("Enter your sure size, press shift and then enter the price").split(' '))
+    size, price = map(int, input("Enter your sure size, press shift and then enter the price: ").split(' '))
     if(Dict[size]):
         Dict[size] -= 1
         p += price
 
 print(p)
+print(size)
