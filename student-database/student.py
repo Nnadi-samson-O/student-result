@@ -1,24 +1,48 @@
-from re import A
-from register import register
-from search import search
-from update import update
-from flask import Flask,request
+import pymongo
+from helper import search
+from model import Student
 
-app=Flask(__name__)
+myclient = pymongo.MongoClient("mongodb://localhost:27017/")
+mydb = myclient["mydatabase"]
+mycollection = mydb["customer"]
 
-@app.route('/')
-def main():
-    return 'This is the main environment'
+def find():
+    name = input("Enter name of student: ")
+    student_exist = mycollection.find_one({"name": name})
+    if student_exist:
+        print("student record")
+    else:
+        print("failure message")
 
-@app.route('/register')
-def reg():
-    return register()
+def register():
+    subjects = []
+    name = input("Enter name of student: ")
+    age = int(input("Enter your age here: "))
+    gender = input("Enter your gender here: ")
+    student_exist = mycollection.find_one({"name": name})
+    if student_exist:
+        print("failure message")
+    else:
+        number_of_subjects = 3
+        for subject in range(number_of_subjects):
+            name_of_subject = input("Enter name of subjects: ")
+            subjects.append(name_of_subject)
 
-@app.route('/search')
-def sear():
-    return search()
+        subject_score = {}
+        for n in subjects:
+            scores = int(input(f"Enter your score here for {n}: "))
+            subject_score[n] = scores
 
-@app.route('/update')
-def upd():
-    return update()
-app.run()
+        score_list = []
+        for m in subject_score.values():
+            score_list.append(m)
+        total = sum(score_list)
+
+        data = Student(name, age, gender, subject_score, total)
+        mycollection.insert_one(data)
+
+def update():
+    name = input("Enter name of student: ")
+    existing_student = search({"name":name})
+    if existing_student:
+        print(existing_student)
